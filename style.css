@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #262f3b;;
+    color: white;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.img__container {
+    width: 200px;
+    height: 200px;
+}
+
+.img__container img {
+    width: 100%;
+}
+
+.filter{
+    display: none;
+}
