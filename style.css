@@ -24,19 +24,10 @@ body{
 }
 
 main {
-    display: flex;
-    align-items: start;
-    width: 610px;
-}
-
-.main__sect{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.article{
-    width: 160px;
-    margin: 0 0 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
 }
 
 .img__container {
