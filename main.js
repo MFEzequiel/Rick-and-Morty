@@ -40,7 +40,7 @@ getCharacters(data => {
                 <div class="art">
                     <h2>${personaje.name}</h2>
                     <p>${personaje.status}</p>
-                <div>
+                </div>
             </article>
         `);
 
