@@ -33,15 +33,18 @@ getCharacters(data => {
     data.results.forEach(personaje => {
         const article = document.createRange().createContextualFragment(`
             <article class="article">
-                <div class="img__container">
+                <figure class="img__container">
                     <img src="${personaje.image}" alt="Personaje">
-                </div>
-                <h2>${personaje.name}</h2>
-                <span>${personaje.status}</span>
+                </figure>
+
+                <div class="art">
+                    <h2>${personaje.name}</h2>
+                    <p>${personaje.status}</p>
+                <div>
             </article>
         `);
 
-        const main = document.querySelector('main');
+        const main = document.getElementById('sect');
         main.append(article);
     });
 });
