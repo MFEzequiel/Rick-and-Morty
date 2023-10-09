@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #262f3b;;
+    background-color: #262f3b;
     color: white;
 }
 
@@ -13,7 +13,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    width:100%;
+    height: 350px;
+    margin-bottom: 50px;
+    background-image:-webkit-linear-gradient(0deg, rgba(38,47,59,1) 12%, rgba(28,34,43,0.8) 44%, rgba(2,67,80,0.8) 100%), url("https://img.freepik.com/premium-photo/whimsical-doodle-seamless-pattern-bringing-joy-laughter-generative-ai_318002-2173.jpg?size=626&ext=jpg&ga=GA1.1.1276876723.1696859181&semt=ais");
+    background-image: linear-gradient(0deg, rgba(38,47,59,1) 12%, rgba(28,34,43,0.8) 44%, rgba(2,67,80,0.8) 100%), url("https://img.freepik.com/premium-photo/whimsical-doodle-seamless-pattern-bringing-joy-laughter-generative-ai_318002-2173.jpg?size=626&ext=jpg&ga=GA1.1.1276876723.1696859181&semt=ais");
 }
 
 .buscador{
@@ -31,10 +35,18 @@ main {
 .main__sect{
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
+    row-gap: 16px;
+}
+
+.article{
+    width: 130px;
+    background-image: -webkit-linear-gradient(0deg, rgba(38,47,59,0.8) 2%, rgba(0, 13, 32) 44%, rgba(2,67,80,0.8) 100%);
+    background-image: linear-gradient(0deg, rgb(38,47,59,0.8) 2%, rgb(0, 13, 32) 44%, rgba(2,67,80,0.8) 100%);
 }
 
 .img__container {
-    width: 130px;
+    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
@@ -42,10 +54,13 @@ main {
 
 .img__container img {
     width: 100%;
+    height: auto;
 }
 
 .art{
-    width: 160px;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
 }
 
 .filter{

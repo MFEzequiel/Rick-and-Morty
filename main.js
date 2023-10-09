@@ -13,24 +13,33 @@ d.addEventListener("keyup", event =>{
     }
 })
 
+// Definición de la función getCharacters que recibe una función "done" como argumento
 function getCharacters(done) {
+    // Realiza una solicitud a la API de Rick and Morty para obtener información sobre personajes
     fetch("https://rickandmortyapi.com/api/character")
         .then(response => {
+            // Verifica si la respuesta es exitosa (200-299)
             if (!response.ok) {
                 throw new Error("No se pudo obtener los personajes.");
             }
+            // Convierte la respuesta a JSON y la retorna
             return response.json();
         })
         .then(data => {
+            // Llama a la función "done" y pasa el objeto JSON como argumento
             done(data);
         })
         .catch(error => {
+            // Captura y maneja errores de la solicitud
             console.error("Error en la solicitud:", error);
         });
 }
 
+// Llama a la función getCharacters y proporciona una función anónima como argumento
 getCharacters(data => {
+    // Itera sobre cada personaje en el array "results"
     data.results.forEach(personaje => {
+        // Crea un nuevo elemento "article" con la información del personaje
         const article = document.createRange().createContextualFragment(`
             <article class="article">
                 <figure class="img__container">
@@ -44,7 +53,9 @@ getCharacters(data => {
             </article>
         `);
 
+        // Encuentra el contenedor principal en el DOM y agrega el "article" creado
         const main = document.getElementById('sect');
         main.append(article);
     });
 });
+
