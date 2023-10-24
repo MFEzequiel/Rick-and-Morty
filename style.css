@@ -13,7 +13,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
     width:100%;
     height: 350px;
     margin-bottom: 50px;
@@ -49,23 +48,30 @@ body{
     background-color: #d6f1ff;
 }
 
+/* Estilo del contenido principal */
 main {
-    margin-top: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
     padding: 10px;
 }
 
 .main__sect{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
     row-gap: 16px;
-    justify-content: center;
+    width: 80%;
 }
 
 .article{
-    width: 130px;
+    width: 300px;
     background-image: -webkit-linear-gradient(0deg, rgba(38,47,59,0.8) 2%, rgba(0, 13, 32) 44%, rgba(2,67,80,0.8) 100%);
     background-image: linear-gradient(0deg, rgb(38,47,59,0.8) 2%, rgb(0, 13, 32) 44%, rgba(2,67,80,0.8) 100%);
+    font-size: larger;
 }
 
 .img__container {
@@ -82,36 +88,24 @@ main {
 
 .art{
     width: 100%;
-    margin: 5px;
-    padding: 5px;
+    margin-top: 5px;
+    padding: 0 5px 0 5px;
 }
 
 .filter{
     display: none;
 }
 
-@media only screen and (max-width: 2920px) {
-    .main{
-        width: 1000px;
-    }
-
+@media only screen and (max-width: 1600px) {
     .article{
-        margin: 0 0 0 50px;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .main{
-        width: 500px;
-    }
-
-    .article{
-        margin: 0 0 0 5px;
+        width: 200px;
     }
 }
 
 @media only screen and (max-width: 900px) {
-    
+    .article{
+        width: 170px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -124,8 +118,8 @@ main {
     }
 
     .article{
+        font: -webkit-control;
         width: 124px;
-        margin: 0 0 0 0;
     }
 }
 
@@ -136,7 +130,6 @@ main {
 
     .article{
         width: 124px;
-        margin: 0 0 0 0;
     }
 
     .buscador{
