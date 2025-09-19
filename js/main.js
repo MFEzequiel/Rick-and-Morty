@@ -1,10 +1,10 @@
 let d = document;
 
 // Escuchar event
-d.addEventListener("keyup", event =>{
-    if (event.target.matches("#Bus")){
-        document.querySelectorAll(".article").forEach(name => {
-            if (name.textContent.toLowerCase().includes(event.target.value.toLowerCase())){
+d.addEventListener("keyup", ev =>{
+    if (ev.target.matches("#Bus")){
+        document.querySelectorAll(".card").forEach(name => {
+            if (name.textContent.toLowerCase().includes(ev.target.value.toLowerCase())){
                 name.classList.remove("filter")
             }else{
                 name.classList.add("filter")
@@ -41,12 +41,12 @@ getCharacters(data => {
     data.results.forEach(personaje => {
         // Crea un nuevo elemento "article" con la información del personaje
         const article = document.createRange().createContextualFragment(`
-            <article class="article">
+            <article class="card">
                 <figure class="img__container">
                     <img src="${personaje.image}" alt="Personaje">
                 </figure>
 
-                <div class="art">
+                <div class="card-text">
                     <h2>${personaje.name}</h2>
                     <p>${personaje.status}</p>
                 </div>

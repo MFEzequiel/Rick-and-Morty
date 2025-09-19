@@ -1,0 +1,7 @@
+.button-theme {
+    background-color: transparent;
+    color: var(--cr);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
